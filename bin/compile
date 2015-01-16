@@ -35,7 +35,6 @@ topic "Reading Copyfile"
 echo $BUILD_DIR
 ls $BUILD_DIR
 cat $BUILD_DIR/Copyfile
-ls -al $BUILD_DIR/configfiles
 
 for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
     SOURCE_FILE=$(echo $COPYSPEC | awk -F':' '{print $1}')
