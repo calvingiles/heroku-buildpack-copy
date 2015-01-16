@@ -32,6 +32,8 @@ function indent() {
 
 topic "Reading Copyfile"
 
+ls $BUILD_DIR
+cat $BUILD_DIR/Copyfile
 
 for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
     SOURCE_FILE=$(echo $COPYSPEC | awk -F':' '{print $1}')
