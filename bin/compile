@@ -33,9 +33,9 @@ function indent() {
 topic "Reading Copyfile"
 
 
-for COPYSPEC in $(cat Copyfile); do
+for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
     SOURCE_FILE=$(echo $COPYSPEC | awk -F':' '{print $1}')
     DEST=$(echo $COPYSPEC | awk -F':' '{print $2}')
     topic "Copying $SOURCE_FILE to $DEST"
-    cp $SOURCE_FILE $DEST
+    cp $BUILD_DIR/$SOURCE_FILE $DEST
 done
