@@ -2,6 +2,8 @@
 
 Add support for file-based config files.
 
+This borrows heavily from [ddollar/heroku-buildpack-apt](https://github.com/ddollar/heroku-buildpack-apt) and is designed to work alongside it.
+
 ## Usage
 
 This buildpack works best with [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) so that it can be used with your app's existing buildpacks.
