@@ -40,5 +40,6 @@ for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
     SOURCE_FILE=$(echo $COPYSPEC | awk -F':' '{print $1}')
     DEST=$(echo $COPYSPEC | awk -F':' '{print $2}')
     topic "Copying $SOURCE_FILE to $DEST"
+    cat $BUILD_DIR/$SOURCE_FILE
     cp $BUILD_DIR/$SOURCE_FILE $DEST
 done
