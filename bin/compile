@@ -42,5 +42,5 @@ for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
     topic "Copying $SOURCE_FILE to $DEST"
     cat $BUILD_DIR/$SOURCE_FILE
     mkdir -p $(dirname ${DEST})
-    cp $BUILD_DIR/$SOURCE_FILE $DEST
+    cat $BUILD_DIR/$SOURCE_FILE > $DEST
 done
